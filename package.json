@@ -1,0 +1,30 @@
+{
+  "name": "lark-metor-briefing",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "vite",
+    "electron:start": "cross-env NODE_ENV=development nodemon --watch src/background.ts --verbose --delay 1 --exec npm run electron:serve",
+    "electron:serve": "cross-env NODE_ENV=development tsc -p tsconfig.electron.json; electron dist/background.js"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "@types/react": "^17.0.40",
+    "@types/react-dom": "^17.0.13",
+    "@vitejs/plugin-react": "^1.2.0",
+    "cross-env": "^7.0.3",
+    "electron-devtools-installer": "^3.2.0",
+    "nodemon": "^2.0.15",
+    "typescript": "^4.6.2",
+    "vite": "^2.8.6"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.5.0",
+    "@mui/material": "^5.5.0",
+    "electron": "^17.1.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
